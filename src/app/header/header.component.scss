@@ -1,0 +1,40 @@
+
+@import '../../variables.scss';
+
+.container{
+  padding: 0 50px;
+  @include md {
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @include xl {padding: 0 200px;}
+  .logo{
+    text-transform: uppercase;
+    span::before{
+      content: "\A";
+      white-space: pre;
+    }
+  }
+  .menu-container{
+    display: none;
+    @include md {
+      padding-left: 100px;
+      display: flex;
+      align-items: center;
+    }
+    .menu-item{
+      text-align: center;
+      padding-right: 50px;
+      font-size: 24px;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover{
+        color: $yellow;
+      }
+      &:focus{
+        border: none;
+      }
+    }
+  }
+}

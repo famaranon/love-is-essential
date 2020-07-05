@@ -1,0 +1,25 @@
+<div class="container" id='share'>
+  <div class="share-container">
+    <h2>Support us !</h2>
+    <h5 class="regular subtitle">Love is essential for everyone, no matter where you are from. Share the news to help thousands.</h5>
+    <div class="share-button twitter" (click)="shareOnTwitter()">
+      <div class="icon-container">
+        <fa-icon [icon]="faTwitter"></fa-icon>
+      </div>
+      <p class="button-text">Share on Twitter</p>
+    </div>
+    <div class="share-button facebook" (click)="shareOnFacebook()">
+      <div class="icon-container">
+        <fa-icon [icon]="faFacebook"></fa-icon>
+      </div>
+      <p class="button-text">Share on Facebook</p>
+    </div>
+    <div class="share-button change" (click)="signPetition()">
+      <div class="icon-container">
+        <img src="../../assets/change.png" class="change-icon">
+      </div>
+      <p class="button-text">Sign our petiton</p>
+    </div>
+  </div>
+  <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/famaranon/timelines/1279500089480880128?ref_src=twsrc%5Etfw"></a>
+</div>

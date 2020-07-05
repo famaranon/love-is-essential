@@ -1,0 +1,19 @@
+<div class="container" id="petition">
+  <img src="../../assets/couple2.jpg" class="image">
+  <div class="info-container">
+    <h1 class="title">Our petition</h1>
+    <h5 class="regular subtitle">Love should be an essential reason for travel and enable non-EU-citizens in an "international" partnership to enter the European Union (+associated states) along with all other permitted essential travellers (cross-border workers, passengers travelling for imperative family reasons, health-care personal, etc.)</h5>
+    <div  class="accordion-container">
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let section of sections">
+          <mat-expansion-panel-header class="panel-header">
+            <mat-panel-title>
+              <h4 class="semi-bold panel-title">{{section.title}}</h4>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="open-sans medium tall subtitle panel-description">{{section.description}}</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+</div>

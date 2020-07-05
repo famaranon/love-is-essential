@@ -1,0 +1,34 @@
+/* Screen Sizes */
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+/* Colors */
+$black: #000;
+$gray: #5f5c5c;
+$white: #fff;
+
+$yellow: #f7c11c;
+
+$facebook-blue: #3f5f95;
+$facebook-blue-light: #6177a1;
+$twitter-blue: #4cafe8;
+$twitter-blue-light: #75b6e6;
+
+$change-red:#da4031;
+$change-red-light:#E1665A;
+
+/* Mixins */
+@mixin sm {
+  @media(min-width: #{$screen-sm-min}){@content;}
+}
+@mixin md {
+  @media(min-width: #{$screen-md-min}){@content;}
+}
+@mixin lg {
+  @media(min-width: #{$screen-lg-min}){@content;}
+}
+@mixin xl {
+  @media(min-width: #{$screen-xl-min}) {@content;}
+}

@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+.container{
+  text-align: center;
+  padding: 50px 0;
+  .subtitle{
+    font-size: 13px;
+    margin: 5px;
+  }
+  .contribute-container{
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    .icon{
+      margin-left: 5px;
+      font-size: 20px;
+      color: $gray;
+    }
+  }
+}

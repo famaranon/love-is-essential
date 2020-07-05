@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/love-is-essential",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

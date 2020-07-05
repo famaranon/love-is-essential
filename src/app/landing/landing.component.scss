@@ -1,0 +1,18 @@
+@import '../../variables.scss';
+
+.container{
+  padding: 0 50px;
+  @include md {display: flex; align-items: center; padding: 50px 0 50px 100px;}
+  @include lg {padding: 50px 0 100px 100px;}
+  @include xl {padding: 50px 0 100px 200px;}
+  .info-container{
+    @include sm {padding-right: 50px;}
+    @include lg {padding-right: 100px;}
+  }
+  .image{
+    display: none;
+    @include md {height: 500px; display: inline;}
+    @include lg {height: 600px;}
+    @include xl {height: 700px;}
+  }
+}
