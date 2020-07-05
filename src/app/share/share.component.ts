@@ -51,7 +51,7 @@ export class ShareComponent implements OnInit, OnDestroy {
   }
 
   public shareOnFacebook(): void {
-    window.open('http://www.facebook.com/sharer.php?s=100&p[title]=LoveIsNotTourism&p[url]=https://love-is-essential.web.app&p[summary]=LoveIsNotTourism', '_blank');
+    window.open('http://www.facebook.com/sharer.php?s=100&p[title]=LoveIsNotTourism&p[url]=https://loveisessential.info&p[summary]=LoveIsNotTourism', '_blank');
   }
 
   public signPetition(): void {
