@@ -6,9 +6,9 @@ import { Location } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'Love is essential';
-  sections = ['petition', 'share'];
+export class AppComponent{
+  title = 'Love Is Essential';
+  sections = ['petition', 'share', 'community'];
   activeSection: string;
 
   constructor(
@@ -48,6 +48,6 @@ export class AppComponent {
 
   private isInViewport(element: Element): boolean {
     const bounding = element.getBoundingClientRect();
-    return (bounding.top - 50) <= 0 && (bounding.bottom - 50) > 0;
+    return (bounding.top - 150) <= 0 && (bounding.bottom - 150) > 0;
   }
 }

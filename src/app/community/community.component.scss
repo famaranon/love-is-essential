@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+.container{
+  padding: 0 50px 50px 50px;
+  @include md {padding: 0 100px 50px 100px;}
+  @include xl {padding: 0 200px 50px 200px;}
+  .title{text-align: center;}
+  .members-container{
+    @include md {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    margin-top: 50px;
+    .member{
+      padding: 15px;
+      width: fit-content;
+      margin: 0 auto;
+      @include md {padding: 40px;}
+      cursor: pointer;
+      .image{
+        height: auto;
+        width: 150px;
+      }
+    }
+  }
+}

@@ -11,9 +11,17 @@
   @include xl {padding: 0 200px;}
   .logo{
     text-transform: uppercase;
-    span::before{
-      content: "\A";
-      white-space: pre;
+    border: 3px solid $black;
+    width: 110px;
+    height: 130px;
+    padding: 0 10px;
+    color: $red;
+    span{
+      color: $black;
+      &::before{
+        content: "\A";
+        white-space: pre;
+      }
     }
   }
   .menu-container{
@@ -30,7 +38,7 @@
       text-decoration: none;
       cursor: pointer;
       &:hover{
-        color: $yellow;
+        color: $red;
       }
       &:focus{
         border: none;

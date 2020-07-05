@@ -11,6 +11,7 @@ import { PetitionComponent } from './petition/petition.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FooterComponent } from './footer/footer.component';
+import { CommunityComponent } from './community/community.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     LandingComponent,
     StoriesComponent,
     PetitionComponent,
-    FooterComponent
+    FooterComponent,
+    CommunityComponent
   ],
   imports: [
     BrowserModule,

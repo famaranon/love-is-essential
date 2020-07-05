@@ -15,8 +15,8 @@
         height: 100% !important;
         &:hover{
           background-color: $white !important;
-          color: $yellow !important;
-          .panel-title{color: $yellow !important;}
+          color: $red !important;
+          .panel-title{color: $red !important;}
         }
         .panel-title{
           margin: 15px !important;
@@ -42,42 +42,3 @@
     @include xl {height: 700px;}
   }
 }
-// .container{
-//   @include md {
-//     margin: 100px;
-//     display: flex;
-//   }
-//   @include xl {margin: 50px 200px 100px 0;}
-//   .info-container{
-//     padding: 0 50px;
-//     @include md {padding-left: 100px;}
-//     .panel-header{
-//       height: 100% !important;
-//       &:hover{
-//         background-color: $white !important;
-//         color: $yellow !important;
-//         .panel-title{color: $yellow !important;}
-//       }
-//       .panel-title{
-//         margin: 15px !important;
-//         font-size: 24px;
-//         @include md {font-size: 28px;}
-//       }
-//     }
-//     .panel-description{
-//       padding: 0 10px;
-//       font-size: 14px;
-//       line-height: 19px;
-//       @include md {
-//         line-height: 30px;
-//         font-size: 18px;
-//       }
-//     }
-//   }
-//   .image{
-//     height: 700px;
-//     @include md {height: 500px; display: inline;}
-//     @include lg {height: 600px;}
-//     @include xl {height: 700px;}
-//   }
-// }

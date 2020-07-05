@@ -47,7 +47,7 @@ export class ShareComponent implements OnInit, OnDestroy {
   }
 
   public shareOnTwitter(): void {
-    window.open('https://twitter.com/intent/tweet?hashtags=LoveIsNotTourism,LoveIsEssential', '_blank');
+    window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Floveisessential.info&hashtags=LoveIsEssential%2CLoveIsNotTourism%2CLiftTheTravelBan', '_blank');
   }
 
   public shareOnFacebook(): void {
