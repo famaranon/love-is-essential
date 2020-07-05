@@ -41,7 +41,7 @@ yarn-error.log
 testem.log
 /typings
 /*.cache
-.firebase
+.firebase/*
 
 
 # System Files
