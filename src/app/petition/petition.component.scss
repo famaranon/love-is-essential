@@ -36,7 +36,8 @@
     }
   }
   .image{
-    height: 800px;
+    max-width: 100%;
+    height: auto;  
     @include md {height: 500px; display: inline;}
     @include xl {height: 700px;}
   }
