@@ -8,28 +8,34 @@
     text-align: left;
     @include md {text-align: center};
   }
-  .article-image-container{
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    .article-image{
-      height: auto;
+  .press-article{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .article-image-container{
       width: 150px;
-      margin: 0;
-      position: relative;
-      top: 50%;
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+      height: 150px;
+      margin: 0 auto;
+      .article-image{
+        height: auto;
+        width: 150px;
+        margin: 0;
+        position: relative;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
     }
-  }
-  .article-quote{
-    color: $gray;
-    font-size: 15px;
-    padding: 0 30px;
-    text-align: center;
-  }
-  .go-to-article{
-    cursor: pointer;
-    text-align: center;
+    .article-quote{
+      color: $gray;
+      font-size: 15px;
+      padding: 0 30px;
+      text-align: center;
+    }
+    .go-to-article{
+      cursor: pointer;
+      text-align: center;
+    }
   }
 }
