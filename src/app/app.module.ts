@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FooterComponent } from './footer/footer.component';
 import { CommunityComponent } from './community/community.component';
+import { PressComponent } from './press/press.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { CommunityComponent } from './community/community.component';
     StoriesComponent,
     PetitionComponent,
     FooterComponent,
-    CommunityComponent
+    CommunityComponent,
+    PressComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { CommunityComponent } from './community/community.component';
     FontAwesomeModule,
     BrowserAnimationsModule,
     MatExpansionModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

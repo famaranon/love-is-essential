@@ -77,3 +77,6 @@ p,a{font-size: 18px;}
   }
 }
 .subtitle{color: $gray}
+
+.slick-prev:before,.slick-next:before{color: $black !important;}
+.slick-slide{outline: none;}

@@ -1,0 +1,16 @@
+<div class="container" id='press'>
+  <h1 class="title">Featured on</h1>
+  <div class="press-articles-container">
+    <ngx-slick-carousel class="carousel" [config]="slideConfig">
+        <div ngxSlickItem  *ngFor="let article of articles" class="slide">
+          <div class="press-article">
+            <div class="article-image-container">
+              <img [src]="article.image" class="article-image">
+            </div>
+            <p class="article-quote open-sans light">{{article.quote}}</p>
+            <p class="go-to-article" (click)="goToArticle(article.url)">Go to article ></p>
+          </div>
+        </div>
+    </ngx-slick-carousel>
+  </div>
+</div>

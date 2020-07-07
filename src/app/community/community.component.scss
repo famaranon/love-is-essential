@@ -4,7 +4,14 @@
   padding: 0 50px 50px 50px;
   @include md {padding: 0 100px 50px 100px;}
   @include xl {padding: 0 200px 50px 200px;}
-  .title{text-align: center;}
+  .title{
+    text-align: left;
+    font-size: 43px;
+    @include md {
+      text-align: center;
+      font-size: 63px;
+    }
+  }
   .members-container{
     @include md {
       display: flex;

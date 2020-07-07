@@ -8,7 +8,7 @@ import { Location } from '@angular/common';
 })
 export class AppComponent{
   title = 'Love Is Essential';
-  sections = ['petition', 'share', 'community'];
+  sections = ['petition', 'press', 'share', 'community'];
   activeSection: string;
 
   constructor(

@@ -4,10 +4,10 @@
 .container{
   padding: 0 50px;
   @include md {
-    padding: 0 100px;
     display: flex;
     justify-content: space-between;
   }
+  @include lg {padding: 0 100px;}
   @include xl {padding: 0 200px;}
   .logo{
     text-transform: uppercase;
@@ -33,10 +33,11 @@
     }
     .menu-item{
       text-align: center;
-      padding-right: 50px;
+      padding-right: 30px;
       font-size: 24px;
       text-decoration: none;
       cursor: pointer;
+      @include lg { padding-right: 50px; }
       &:hover{
         color: $red;
       }

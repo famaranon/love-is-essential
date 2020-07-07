@@ -1,0 +1,35 @@
+@import '../../variables.scss';
+
+.container{
+  padding: 0 50px 50px 50px;
+  @include md {padding: 0 100px 50px 100px;}
+  @include xl {padding: 0 200px 50px 200px;}
+  .title{
+    text-align: left;
+    @include md {text-align: center};
+  }
+  .article-image-container{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    .article-image{
+      height: auto;
+      width: 150px;
+      margin: 0;
+      position: relative;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+  .article-quote{
+    color: $gray;
+    font-size: 15px;
+    padding: 0 30px;
+    text-align: center;
+  }
+  .go-to-article{
+    cursor: pointer;
+    text-align: center;
+  }
+}
