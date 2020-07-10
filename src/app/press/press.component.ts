@@ -30,6 +30,12 @@ export class PressComponent {
 
   public articles = [
     {
+      image: '../../assets/thenewyorktimes.jpg',
+      quote: '\"As some restrictions are lifted on who can enter, unmarried couples are calling on European countries to make it possible for them to be together again.\"',
+      url: 'https://www.nytimes.com/2020/07/08/world/europe/couples-separated-eu-travel-ban.html?smid=tw-nytimes&smtyp=cur',
+      alt: 'The New York Times'
+    },
+    {
       image: '../../assets/forbes.png',
       quote: '\"Thousands of people feel they’re being deprived of their basic rights to love through the Covid crisis. Now there is some hope at the end of months-long tunnels for them.\"',
       url: 'https://www.forbes.com/sites/tamarathiessen/2020/07/06/europe-travel-ban-eu-wants-us-lovers-couples-exempt/#754b71f04c94',
@@ -46,6 +52,13 @@ export class PressComponent {
       quote: '\"Much of the EU’s reopening has focused on boosting the bloc’s massive tourism industry, so distinguishing family and relationship travel from vacations and business trips has been a point of the campaign.\"',
       url: 'https://www.huffpost.com/entry/european-union-united-states-travel-ban-long-term-partners_l_5f03b51ec5b6db596745d7e5',
       alt: 'HUFFPOST'
+    },
+    {
+      image: '../../assets/bild.svg',
+      quote: '\"Dänemark gehe hier beispielhaft voran. Möglich sei beispielsweise ein negatives Testergebnis sowie ein zusätzlicher Schnelltest bei der Ankunft.\"',
+      url: 'https://www.bild.de/politik/inland/politik-inland/corona-verhindert-ihr-wiedersehen-binationale-paare-bitten-politik-um-hilfe-71579336.bild.html',
+      alt: 'Bild'
+
     },
     {
       image: '../../assets/lavanguardia.svg',

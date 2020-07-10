@@ -24,15 +24,18 @@ export class AppComponent{
         if (isInViewport) {
           this.activeSection = section;
           const pathWithHash = this.location.path(true);
-          if (pathWithHash !== `/#${section}` ) {
+          if (pathWithHash !== `#${section}` ) {
             this.setNewState(section);
           }
         }
         anchors[section] = isInViewport;
     });
     if (Object.values(anchors).every(anchor => !anchor)) {
-      this.activeSection = '';
-      this.setNewState();
+      const pathWithHash = this.location.path(true);
+      if (pathWithHash !== '') {
+        this.activeSection = '';
+        this.setNewState();
+      }
     }
   }
 
