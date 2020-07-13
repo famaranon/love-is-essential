@@ -12,7 +12,7 @@ export class ImageService {
 
   constructor(private snackBar: MatSnackBar) { }
 
-  public getImageData(file: Blob, variant: string): void {
+  public getImageData(file: Blob, variant: string, avatarType: string): void {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
@@ -20,7 +20,7 @@ export class ImageService {
       img.src = reader.result as string;
       img.onload = () => {
         const data = this.createCanvas(img);
-        this.mergeImage(data, variant);
+        this.mergeImage(data, variant, avatarType);
       };
       img.onerror = () => this.snackBar.open('An error has occurred', 'dismiss', {panelClass: 'error-notification', duration: 10000});
     };
@@ -81,12 +81,18 @@ export class ImageService {
     ctx.drawImage(img, cx, cy, cw, ch,  x, y, w, h);
   }
 
-  private mergeImage(image, variant): void {
+  private mergeImage(image: string, variant: string, avatarType: string): void {
     let logo = '../../../assets/logo-big-white.png';
+    let padding = 10;
     if (variant === 'tourism') { logo = '../../../assets/logo-tourism-big-white.png'; }
+    if (avatarType === 'round') {
+      padding = 70;
+      logo = '../../../assets/logo-big-white.png-round.png';
+      if (variant === 'tourism') { logo = '../../../assets/logo-tourism-big-white-round.png'; }
+    }
     mergeImages([
       { src: image},
-      { src: logo, x: 10, y: 10 },
+      { src: logo, x: padding, y: padding },
     ])
     .then(b64 => {
       this.downloadImage(b64);

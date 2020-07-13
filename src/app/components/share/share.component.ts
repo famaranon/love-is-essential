@@ -16,6 +16,7 @@ export class ShareComponent implements OnInit, OnDestroy {
   public faFacebook = faFacebook;
   public faCamera = faCamera;
   public selectedTemplate = 'tourism';
+  public selectedAvatarType = 'square';
   private twitter: any;
   private file: File = null;
 
@@ -34,7 +35,7 @@ export class ShareComponent implements OnInit, OnDestroy {
 
   public handleFileInput(files: FileList): void {
     this.file = files.item(0);
-    this.imageService.getImageData(this.file, this.selectedTemplate);
+    this.imageService.getImageData(this.file, this.selectedTemplate, this.selectedAvatarType);
   }
 
   private initTwitterWidget(): any {

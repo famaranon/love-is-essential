@@ -53,8 +53,10 @@
     }
     .avatar-image{
       width: 100%;
-      @include md {width: 50%;}
-      @include lg {width: 60%;}
+      height: 100%;
+      object-fit: contain;
+      @include md {width: 50%; height: 50%;}
+      @include lg {width: 60%; height: 60%;}
     }
   }
 }

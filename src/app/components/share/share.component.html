@@ -11,6 +11,13 @@
           <mat-option value="tourism">Love Is Not Tourism</mat-option>
         </mat-select>
       </mat-form-field>
+      <mat-form-field class="select">
+        <mat-label>Select avatar type</mat-label>
+        <mat-select [(value)]="selectedAvatarType">
+          <mat-option value="round">Round</mat-option>
+          <mat-option value="square">Square</mat-option>
+        </mat-select>
+      </mat-form-field>
       <div class="share-button picture">
         <input type="file" id="file" class="inputfile" accept="image/*" (change)="handleFileInput($event.target.files)">
         <label for="file"><fa-icon [icon]="faCamera" class="camera-icon"></fa-icon>Choose File</label>
