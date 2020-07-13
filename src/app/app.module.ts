@@ -2,17 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ShareComponent } from './share/share.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ShareComponent } from './components/share/share.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LandingComponent } from './landing/landing.component';
-import { StoriesComponent } from './stories/stories.component';
-import { PetitionComponent } from './petition/petition.component';
+import { LandingComponent } from './components/landing/landing.component';
+import { StoriesComponent } from './components/stories/stories.component';
+import { PetitionComponent } from './components/petition/petition.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { FooterComponent } from './footer/footer.component';
-import { CommunityComponent } from './community/community.component';
-import { PressComponent } from './press/press.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FooterComponent } from './components/footer/footer.component';
+import { CommunityComponent } from './components/community/community.component';
+import { PressComponent } from './components/press/press.component';
+import { ImageService } from './services/image.service';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
@@ -33,9 +36,13 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     FontAwesomeModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    MatSelectModule,
+    MatSnackBarModule
   ],
-  providers: [],
+  providers: [
+    ImageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

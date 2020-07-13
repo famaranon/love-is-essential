@@ -29,6 +29,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "jquery": "^3.5.1",
+    "merge-images": "^2.0.0",
     "ngx-slick-carousel": "^0.5.1",
     "rxjs": "~6.5.5",
     "slick-carousel": "^1.8.1",

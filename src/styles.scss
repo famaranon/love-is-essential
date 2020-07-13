@@ -42,7 +42,7 @@ body{
   height: 100%;
 }
 
-h1,h2,h3,h4,h5,h6,p,a{
+h1,h2,h3,h4,h5,h6,p,a,label{
   font-family: 'Oswald';
   color: $black;
 }
@@ -83,4 +83,29 @@ p,a{font-size: 18px;}
 .slick-slide{
   outline: none;
   height: inherit !important;
+}
+
+.not-empty-select.mat-selected{color: $red !important;}
+.mat-select-value-text{color: $red !important;}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled){color: $red !important;}
+
+mat-form-field{
+  span.mat-form-field-label-wrapper label{color: $light-gray !important;}
+  .mat-form-field-underline{background-color: $light-gray !important;}
+  .mat-form-field-ripple{background-color: $light-gray !important;}
+  .mat-select-arrow{color: $light-gray !important;}
+  &.mat-focused{
+    span.mat-form-field-label-wrapper label{color: $light-gray !important;}
+    .mat-form-field-underline{background-color: $light-gray !important;}
+    .mat-form-field-ripple{background-color: $light-gray !important;}
+  }
+}
+
+.error-notification{
+  color: $red !important; // green
+  background-color: $red-light !important;
+  border-color: $red-light !important;
+  .mat-simple-snackbar-action {
+    color: $red !important;
+  }
 }

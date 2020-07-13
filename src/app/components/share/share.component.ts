@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faCamera } from '@fortawesome/free-solid-svg-icons';
 import { Router, NavigationEnd } from '@angular/router';
+import { ImageService } from 'src/app/services/image.service';
 
 
 @Component({
@@ -12,10 +14,14 @@ export class ShareComponent implements OnInit, OnDestroy {
 
   public faTwitter = faTwitter;
   public faFacebook = faFacebook;
+  public faCamera = faCamera;
+  public selectedTemplate = 'tourism';
   private twitter: any;
+  private file: File = null;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private imageService: ImageService,
   ) { }
 
   ngOnInit(): void {
@@ -24,6 +30,11 @@ export class ShareComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.twitter.unsubscribe();
+  }
+
+  public handleFileInput(files: FileList): void {
+    this.file = files.item(0);
+    this.imageService.getImageData(this.file, this.selectedTemplate);
   }
 
   private initTwitterWidget(): any {

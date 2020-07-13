@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import '../../../variables.scss';
 
 .container{
   @include md {display: flex; align-items: center; padding: 50px 100px 50px 0;}
