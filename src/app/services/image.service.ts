@@ -87,7 +87,7 @@ export class ImageService {
     if (variant === 'tourism') { logo = '../../../assets/logo-tourism-big-white.png'; }
     if (avatarType === 'round') {
       padding = 70;
-      logo = '../../../assets/logo-big-white.png-round.png';
+      logo = '../../../assets/logo-big-white-round.png';
       if (variant === 'tourism') { logo = '../../../assets/logo-tourism-big-white-round.png'; }
     }
     mergeImages([

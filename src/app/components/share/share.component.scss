@@ -94,6 +94,7 @@
   }
   &.picture{
     background-color: $red;
+    width: 100%;
     .inputfile {
       width: 0.1px;
       height: 0.1px;
@@ -113,8 +114,7 @@
         display: inline-block;
         padding: 14px 0;
         .camera-icon{
-          padding-left: 20px;
-          padding-right: 60px;
+          padding: 0 60px;
         }
       }
     }
