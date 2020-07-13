@@ -3,6 +3,7 @@ import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faCamera } from '@fortawesome/free-solid-svg-icons';
 import { Router, NavigationEnd } from '@angular/router';
 import { ImageService } from 'src/app/services/image.service';
+import { GoogleAnalyticsService } from 'src/app/services/google-analytics.service';
 
 
 @Component({
@@ -23,6 +24,7 @@ export class ShareComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private imageService: ImageService,
+    private googleAnalytics: GoogleAnalyticsService
   ) { }
 
   ngOnInit(): void {
@@ -59,14 +61,17 @@ export class ShareComponent implements OnInit, OnDestroy {
   }
 
   public shareOnTwitter(): void {
+    this.googleAnalytics.logEvent('share', 'twitter');
     window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Floveisessential.info&hashtags=LoveIsEssential%2CLoveIsNotTourism%2CLiftTheTravelBan', '_blank');
   }
 
   public shareOnFacebook(): void {
+    this.googleAnalytics.logEvent('share', 'facebook');
     window.open('http://www.facebook.com/sharer.php?s=100&p[title]=LoveIsNotTourism&p[url]=https://loveisessential.info&p[summary]=LoveIsNotTourism', '_blank');
   }
 
   public signPetition(): void {
+    this.googleAnalytics.logEvent('share', 'change');
     window.open('http://chng.it/2D6g5dHJGN', '_blank');
   }
 

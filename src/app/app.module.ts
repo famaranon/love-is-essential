@@ -17,6 +17,7 @@ import { CommunityComponent } from './components/community/community.component';
 import { PressComponent } from './components/press/press.component';
 import { ImageService } from './services/image.service';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { GoogleAnalyticsService } from './services/google-analytics.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     MatSnackBarModule
   ],
   providers: [
-    ImageService
+    ImageService,
+    GoogleAnalyticsService
   ],
   bootstrap: [AppComponent]
 })

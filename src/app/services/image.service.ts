@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import mergeImages from 'merge-images';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { GoogleAnalyticsService } from './google-analytics.service';
 
 
 const IMAGE_SIZE = 500;
@@ -10,9 +11,13 @@ const IMAGE_SIZE = 500;
 })
 export class ImageService {
 
-  constructor(private snackBar: MatSnackBar) { }
+  constructor(
+    private snackBar: MatSnackBar,
+    private googleAnalytics: GoogleAnalyticsService
+  ) { }
 
   public getImageData(file: Blob, variant: string, avatarType: string): void {
+    this.googleAnalytics.logEvent('transform_image', `${variant}`, `${avatarType}`);
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {

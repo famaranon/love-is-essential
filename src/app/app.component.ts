@@ -1,5 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Location } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router';
+declare let gtag: (config: string, tag: string, object: any) => void;
 
 @Component({
   selector: 'app-root',
@@ -12,8 +14,16 @@ export class AppComponent{
   activeSection: string;
 
   constructor(
-    private location: Location
-  ) { }
+    private location: Location,
+    private router: Router
+  ) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        console.log(event);
+        gtag('config', 'G-F0P72WVY34', { page_path: event.urlAfterRedirects });
+      }
+    });
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(): void {
