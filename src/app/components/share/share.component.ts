@@ -17,7 +17,7 @@ export class ShareComponent implements OnInit, OnDestroy {
   public faFacebook = faFacebook;
   public faCamera = faCamera;
   public selectedTemplate = 'tourism';
-  public selectedAvatarType = 'square';
+  public selectedAvatarType = 'round';
   private twitter: any;
   private file: File = null;
 
